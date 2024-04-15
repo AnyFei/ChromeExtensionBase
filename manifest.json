@@ -1,0 +1,26 @@
+{
+  "name": "Radek's Tools",
+  "version": "0.1.0",
+  "description": "Meetings chat history. Saved",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://test.radoslawgrzesiek.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://test.radoslawgrzesiek.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "24": "images/icon-16.png",
+      "32": "images/icon-16.png"
+    }
+  },
+
+  "manifest_version": 3
+}
